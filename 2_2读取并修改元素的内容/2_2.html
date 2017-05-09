@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>读取并修改元素的内容</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		select{width:100px;height:85px;}
+		div{display: inline-block;width: 50px;}
+	</style>
+	<script type="text/javascript" src="2_2.js"></script>
+</head>
+<body>
+	<select id="unsel" size="5" multiple>
+		<option>Argentinal</option>
+		<option>Brazil</option>
+		<option>Canada</option>
+		<option>China</option>
+		<option>Denmark</option>
+		<option>Greece</option>
+		<option>Spain</option>
+	</select>
+	<div>
+		<button onclick="move(this)">&gt;&gt;</button>
+		<button onclick="move(this)">&gt;</button>
+		<button onclick="move(this)">&lt;</button>
+		<button onclick="move(this)">&lt;&lt;</button>
+	</div>
+	<select id="sel" size="5" multiple></select>
+</body>
+</html>

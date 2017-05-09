@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实现带样式的表单验证、阻止自动表单提交</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="2_3.css"/>
+	<script type="text/javascript" src="2_3.js"></script>
+</head>
+<body>
+	<form onsubmit="valiAll(event)">
+		<h2>增加管理员</h2>
+		<table>
+			<tr>
+				<td>姓名：</td>
+				<td>
+					<input name="name" onfocus="getFocus(this)" onblur="valiName(this)">
+					<span>*</span>
+				</td>
+				<td>
+					<div class="vali_Info">10个字符以内的字母、数字和下划线的组合</div>
+				</td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td>
+					<input type="password" name="pwd" onfocus="getFocus(this)" onblur="valiPwd(this)">
+					<span>*</span>
+				</td>
+				<td>
+					<div class="vali_Info">6位数字</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button>保存</button>
+				</td>
+				<td>
+					<button>重置</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

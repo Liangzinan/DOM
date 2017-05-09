@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>联动菜单</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var categories=[
+			{
+				"id":10,"name":'男装',"children":[
+					{"id":101,"name":'正装'},{"id":102,"name":'T恤'},{"id":103,"name":'衬衣'}
+				]
+			},
+			{
+				"id":20,"name":'女装',"children":[
+					{"id":201,"name":'短裙'},{"id":202,"name":'连衣裙'},{"id":203,"name":'裤子',"children":[
+						{"id":2031,"name":'长裤'},{"id":2032,"name":'九分裤'},{"id":2033,"name":'短裤'}
+					]}
+				]
+			}
+		];
+	</script>
+	<script type="text/javascript" src="3_4.js"></script>
+</head>
+<body>
+	<div id="category"></div>
+</body>
+</html>

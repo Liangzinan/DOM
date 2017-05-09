@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function calc(e){
+			var target=e.srcElement||e.target;
+			if(target.nodeName=="BUTTON"){
+				var sc=document.getElementById("sc");
+				if(target.innerHTML=="C"){
+					sc.innerHTML="";
+				}else if(target.innerHTML=="="){
+					try{
+						sc.innerHTML=eval(sc.innerHTML);
+					}catch(err){
+						sc.innerHTML=err.message;
+					}
+				}else{
+					sc.innerHTML+=target.innerHTML;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div onclick="calc(event)">
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+		<button>4</button><br>
+		<button>C</button>
+		<button>+</button>
+		<button>-</button>
+		<button>=</button>
+	</div>
+	<textarea id="sc"></textarea>
+</body>
+</html>

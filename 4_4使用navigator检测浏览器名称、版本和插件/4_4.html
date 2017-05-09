@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	//浏览器名称、版本
+		var ua=navigator.userAgent;
+		var browser="unknown";
+		if(ua.indexOf("MSIE")!=-1){
+			browser="MSIE";
+		}else if(ua.indexOf("Firefox")!=-1){
+			browser="Firefox";
+		}else if(ua.indexOf("Chrome")!=-1){
+			browser="Chrome";
+		}else if(ua.indexOf("Safari")!=-1){
+			browser="Safari";
+		}else if(ua.indexOf("Trident")!=-1){
+			browser="IE 11";
+		}else if(ua.indexOf("OPR")!=-1){
+			browser="OPERA";
+		}
+		var ver="";
+		if(browser=="unknown"){
+			alert("不支持");
+		}else if(browser=="OPERA"){
+			var i=ua.indexOf("OPR");
+			i+=4;
+			ver=parseFloat(ua.slice(i,i+4));
+		}else if(browser=="IE 11") {
+			ver="11";
+		}else{
+			var i=ua.indexOf(browser);
+			i+=browser.length+1;
+			ver=parseFloat(ua.slice(i,i+4));
+		}
+		alert(browser+" "+ver);
+	//浏览器是否含有Tencent QQ插件
+		var pl=navigator.plugins;
+		for(var i=0;i<pl.length;i++){
+			if(pl[i].name=="Tencent QQ"){
+				alert("支持Tencent QQ");
+				break;
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

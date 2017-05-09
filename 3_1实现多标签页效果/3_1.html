@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实现多标签页效果</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="3_1.css">
+	<script type="text/javascript">
+		function show(id){
+			var oldDiv=document.querySelector("div[style*='z-index']");
+			//oldDiv.style.cssText="";
+			oldDiv.style.removeProperty("z-index");
+			var div=document.getElementById(id);
+			div.style.zIndex="1";
+			//div.style.setProperty("z-index","1");
+		}
+	</script>
+</head>
+<body>
+	<h2>实现多标签页效果</h2>
+	<ul id="tab">
+		<li id="tab1" onclick="show('content1')">10元套餐</li>
+		<li id="tab2" onclick="show('content2')">30元套餐</li>
+		<li id="tab3" onclick="show('content3')">50元套餐</li>
+	</ul>
+	<div id="container">
+		<div id="content1" style="z-index: 1;">
+			10元套餐详情：<br>&nbsp;每月套餐内拨打100分钟，超出部分2毛/分钟
+		</div>
+		<div id="content2" >
+			30元套餐详情：<br>&nbsp;每月套餐内拨打300分钟，超出部分2毛/分钟
+		</div>
+		<div id="content3" >
+			50元套餐详情：<br>&nbsp;每月套餐内拨打500分钟，超出部分2毛/分钟
+		</div>
+	</div>
+
+</body>
+</html>

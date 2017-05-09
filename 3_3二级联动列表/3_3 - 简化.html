@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>二级联动列表</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.hide{
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var cities=[[],[{"name":"东城区","value":101},{"name":"西城区","value":102},{"name":"朝阳区","value":103}],[{"name":"河东区","value":201},{"name":"河西区","value":202}],[{"name":"廊坊市","value":301},{"name":"保定市","value":302}]];
+		function getCities(selProvs){
+			var selCities=document.querySelector("select[name=cities]");
+			if(cities[selProvs.selectedIndex].length!=0){
+				document.querySelector("select[name=cities]").removeAttribute("class");
+			}
+			selCities.innerHTML="";
+			selCities.add(new Option("-请选择-",-1));
+			for(var i=0;i<cities[selProvs.selectedIndex].length;i++){
+				selCities.add(new Option(cities[selProvs.selectedIndex][i].name,cities[selProvs.selectedIndex][i].value));
+			}
+		}	
+	</script>
+</head>
+<body>
+	<select name="provs" onchange="getCities(this)">
+		<option>-请选择-</option>
+		<option>北京市</option>
+		<option>天津市</option>
+		<option>河北省</option>
+	</select>
+	<select name="cities" class="hide"></select>
+</body>
+</html>

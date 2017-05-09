@@ -1,0 +1,24 @@
+span{
+	color: red;
+}
+.vali_Info{
+	display: none;
+}
+.txt_focus{
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+}
+.vali_success{
+	width: 0px;
+	height: 0px;
+	border: 5px solid #ddd;
+	border-color: transparent transparent #ddd transparent;
+	overflow: hidden;
+}
+.vali_fail{
+	width: 0px;
+	height: 0px;
+	border: 5px solid red;
+	border-color: transparent transparent red transparent;
+	overflow: hidden;
+}

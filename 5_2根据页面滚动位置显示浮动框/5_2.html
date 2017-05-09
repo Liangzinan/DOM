@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			height: 2000px;
+		}
+		#toTop{
+			display: none;
+		}
+		#toTop a{
+			position: fixed;
+			right: 50px;
+			bottom: 50px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onscroll=function () {
+			// body... 
+			var top=document.documentElement.scrollTop || document.body.scrollTop;
+			var toTop=document.getElementById("toTop");
+			if(top>=300){
+				toTop.style.display="block";
+			}else{
+				toTop.style.display="none";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="toTop">
+		<a href="#">返回顶部</a>
+	</div>
+</body>
+</html>
