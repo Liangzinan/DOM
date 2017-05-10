@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload=function(){
+			var cookies=document.cookie.split("; ");
+			for(var i=0;i<cookies.length;i++){
+				if(cookies[i].indexOf("userName")!=-1){
+					var eqi=cookies[i].indexOf("=");
+					var userName=cookies[i].slice(eqi+1);
+					document.getElementById("uname").innerHTML=userName;
+					break;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>欢迎回来：<span id="uname"></span></h2>
+</body>
+</html>

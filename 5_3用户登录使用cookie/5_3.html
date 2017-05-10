@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+ 	<script type="text/javascript" src="5_3.js"></script>
+</head>
+<body>
+	<h2>用户登录</h2>
+	<form action="5_3_loginResult.html" method="post">
+		用户名：<input type="text" name="userName"><br>
+		密码：<input type="password" name="userPwd"><br>
+		<input type="radio" name="noLoginPeriod" value="7">一周内不在登录
+		<input type="radio" name="noLoginPeriod" value="14">两周内不在登录
+		<input type="radio" name="noLoginPeriod" value="30">一月内不在登录<br>
+		<input type="button" onclick="submitForm()" value="登录">
+	</form>
+</body>
+</html>
